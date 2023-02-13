@@ -3,30 +3,10 @@
         <h3>{{title}} </h3>
     </div>
     <hr>
-    <form class="row">
-        <div class="mb-3 col-sm-3">
-            <label for="nombre" class="form-label visually-hidden">Nombre:</label>
-            <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre"
-                [(ngModel)]="agregar.nombre">
-        </div>
-        <div class="mb-3 col-sm-3">
-            <label for="nombre" class="form-label visually-hidden">Apellido:</label>
-            <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Apellido"
-                [(ngModel)]="agregar.apellido">
-        </div>
-        <div class="col">
-            <button type="submit" class="btn btn-primary" (click)="agregarPersona()">Agregar</button>
-        </div>
-    </form>
-</div>
-
-<div class="container">
+    <app-formulario></app-formulario>
     <hr>
-    <div class="row">
-        <div class="col-sm-12">
-            <div *ngFor="let persona of personas; let i = index">
-                {{i+1}} : {{persona.nombre}} {{persona.apellido}}
-            </div>
-        </div>
-    </div>
+    <!--Lista de personas-->
+    <app-persona *ngFor="let personaElemento of personas; let i = index" [persona]="personaElemento" [indice]="i">
+
+    </app-persona>
 </div>

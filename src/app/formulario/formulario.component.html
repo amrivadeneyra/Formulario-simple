@@ -1,0 +1,15 @@
+<form class="row">
+    <div class="mb-3 col-sm-3">
+        <label for="nombre" class="form-label visually-hidden">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre"
+            [(ngModel)]="agregar.nombre">
+    </div>
+    <div class="mb-3 col-sm-3">
+        <label for="nombre" class="form-label visually-hidden">Apellido:</label>
+        <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Apellido"
+            [(ngModel)]="agregar.apellido">
+    </div>
+    <div class="col">
+        <button type="submit" class="btn btn-primary" (click)="agregarPersona()">Agregar</button>
+    </div>
+</form>
